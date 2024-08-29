@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple Flexbox</title>
+    <style>
+        /* Ajoute ici les styles CSS que nous allons créer */
+
+        /* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    background-color: #ccc;
+    width: 200px;
+    padding: 1rem;
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Optionnel: Pour rendre le site plus joli */
+.header, .footer, .sidebar, .content {
+    border: 1px solid #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">En-tête</header>
+        <div class="main-content">
+            <aside class="sidebar">Barre latérale</aside>
+            <section class="content">Contenu principal</section>
+        </div>
+        <footer class="footer">Pied de page</footer>
+    </div>
+</body>
+</html>

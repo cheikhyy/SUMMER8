@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Positionnement CSS</title>
+    <style>
+        /*  le code CSS ici */
+
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    height: 2000px; /* Ajouté pour illustrer fixed et sticky */
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.box1 {
+    background-color: #3498db; /* Bleu */
+    position: static;
+    /* La position par défaut est 'static' donc aucune propriété supplémentaire n'est nécessaire ici */
+}
+
+.box2 {
+    background-color: #e74c3c; /* Rouge */
+    position: relative;
+    top: 20px; /* Se déplace de 20px vers le bas par rapport à sa position normale */
+    left: 20px; /* Se déplace de 20px vers la droite par rapport à sa position normale */
+}
+
+.box3 {
+    background-color: #2ecc71; /* Vert */
+    position: absolute;
+    top: 100px; /* Positionné à 100px du haut du conteneur parent */
+    left: 50px; /* Positionné à 50px du bord gauche du conteneur parent */
+}
+
+.box4 {
+    background-color: #f39c12; /* Orange */
+    position: fixed;
+    top: 10px; /* Toujours à 10px du haut de la fenêtre */
+    right: 10px; /* Toujours à 10px du bord droit de la fenêtre */
+}
+
+.box5 {
+    background-color: #8e44ad; /* Violet */
+    position: sticky;
+    top: 0; /* Devient fixe (sticky) lorsqu'il atteint le haut de la fenêtre */
+}
+
+    </style>
+</head>
+<body>
+    <div class="box box1">Box 1 - Static</div>
+    <div class="box box2">Box 2 - Relative</div>
+    <div class="box box3">Box 3 - Absolute</div>
+    <div class="box box4">Box 4 - Fixed</div>
+    <div class="box box5">Box 5 - Sticky</div>
+</body>
+</html>
+
+
+<!-- ### Étape 3 : Explication et Résultat
+
+#### 1. **Position Static (`.box1`)**
+   - **Comportement** : `static` est le positionnement par défaut. L'élément se positionne selon le flux normal du document, sans modification.
+   - **Cas d'utilisation** : Utilisé lorsque tu ne veux pas manipuler la position de l'élément.
+
+#### 2. **Position Relative (`.box2`)**
+   - **Comportement** : `relative` positionne l'élément par rapport à sa position normale dans le flux du document. Ici, `top: 20px; left: 20px;` déplace l'élément de 20px vers le bas et la droite.
+   - **Cas d'utilisation** : Utile pour ajuster légèrement la position d'un élément tout en gardant sa place dans le flux du document.
+
+#### 3. **Position Absolute (`.box3`)**
+   - **Comportement** : `absolute` retire l'élément du flux normal du document et le positionne par rapport à son premier parent non `static`. Si aucun parent n'est spécifié, il se positionne par rapport à la page.
+   - **Cas d'utilisation** : Idéal pour positionner des éléments sans affecter la mise en page des autres éléments.
+
+#### 4. **Position Fixed (`.box4`)**
+   - **Comportement** : `fixed` positionne l'élément par rapport à la fenêtre du navigateur. Il reste à la même place même lorsque la page défile.
+   - **Cas d'utilisation** : Parfait pour les barres de navigation fixes ou les boutons "Retour en haut".
+
+#### 5. **Position Sticky (`.box5`)**
+   - **Comportement** : `sticky` est un mélange de `relative` et `fixed`. L'élément se comporte comme `relative` jusqu'à ce qu'il atteigne un certain point où il devient `fixed` lors du défilement.
+   - **Cas d'utilisation** : Pratique pour les en-têtes ou sections qui doivent rester visibles lors du défilement.
+
+### Étape 4 : Expérimentation
+- **Change les valeurs des propriétés `top`, `left`, `right`, `bottom` pour observer les effets.**
+- **Ajoute d'autres éléments pour voir comment le comportement de chaque `position` affecte la disposition des autres éléments.**
+  
+Cet exercice devrait t'aider à comprendre les différents types de positionnement en CSS et comment ils affectent la mise en page d'une page web. -->
