@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .citation::before, .citation::after {
+          content: "“"; /* Guillemets ouvrants */
+          font-size: 2rem;
+          color: gray;
+        }
+        
+        .citation::after {
+          content: "”"; /* Guillemets fermants */
+          font-size: 2rem;
+          color: gray;
+        }
+      </style>
+</head>
+<body>   
+      <p class="citation">Le contenu de cette citation est stylisé.</p> 
+</body>
+</html>

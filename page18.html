@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo SUMMER</title>
+</head>
+
+
+<body>
+    
+<P>Lorem ipsum dolor sit amet consectetur adipisicing
+     elit. Ratione nesciunt adipisci accusantium voluptas culpa vitae iusto similique excepturi rem nisi?
+</P>
+
+
+<script >
+
+
+//Syntaxe de base :
+
+switch(expression) {
+  case valeur1:
+    // Exécuter ce code si expression === valeur1
+    break;
+  case valeur2:
+    // Exécuter ce code si expression === valeur2
+    break;
+  default:
+    // Exécuter ce code si aucune des valeurs ne correspond
+}
+
+
+
+//La déclaration switch permet de comparer une expression à plusieurs cas possibles
+ //et d'exécuter le bloc de code correspondant au cas qui correspond à la valeur de l'expression.
+  //C'est utile lorsque plusieurs 
+//conditions possibles existent et que l'utilisation de plusieurs if...else deviendrait peu pratique.
+
+let jour = 3;
+
+switch(jour) {
+  case 1:
+    console.log('Lundi');
+    break;
+  case 2:
+    console.log('Mardi');
+    break;
+  case 3:
+    console.log('Mercredi');
+    break;
+  default:
+    console.log('Jour inconnu');
+}
+
+//Dans cet exemple, le switch vérifie la valeur de jour.
+ //Si elle est égale à 3, il affichera "Mercredi".
+
+//break permet de sortir du switch une fois qu'un cas est exécuté.
+//default est utilisé si aucune des valeurs de cas ne correspond.
+
+
+// Structure :
+while (condition) {
+  // Bloc de code à exécuter tant que la condition est vraie
+}
+
+
+let i = 0;
+
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+//Dans cet exemple, la boucle continue
+// à s'exécuter tant que i est inférieur à 5. À chaque itération,
+ // la valeur de i est affichée et augmentée de 1.
+
+
+  //La boucle do while
+//La boucle do while est similaire à la boucle while,
+ //sauf qu'elle exécute toujours le bloc de code au moins
+ //une fois, même si la condition est fausse dès le début. 
+ //Après chaque exécution, la condition est évaluée.
+
+
+// Structure
+ do {
+  // Bloc de code à exécuter
+} while (condition);
+
+
+//exemples
+let j = 0;
+
+do {
+  console.log(j);
+  j++;
+} while (j < 5);
+
+
+//Dans cet exemple, 
+//le bloc de code est exécuté au moins une fois, 
+//même si la condition (j < 5) est évaluée après.
+
+
+//Différence entre while et do while :
+//while : La condition est vérifiée avant l'exécution du code, donc si la condition est fausse dès le départ, le code ne s'exécute jamais.
+//do while : La condition est vérifiée après l'exécution du code, donc le bloc de code est toujours exécuté au moins une fois.
+
+//Résumé :
+//Utilise switch pour gérer plusieurs cas basés sur une seule valeur.
+//Utilise while pour répéter une action tant qu'une condition est vraie.
+//Utilise do while si tu veux t'assurer que le code s'exécute au moins une fois.
+
+</script>
+</body>
+</html>
