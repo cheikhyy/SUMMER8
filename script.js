@@ -1,4 +1,36 @@
 // Définition des variables
+//var et let peuvent être réassignés
+//🔹 const ne peut pas être modifié après déclaration
+var a = 10;
+let b = 20;
+const c = 30;
+
+a = 15; // ✅ OK
+b = 25; // ✅ OK
+c = 35; // ❌ Erreur ! Impossible de modifier une constante
+
+// Conclusion :
+
+// Utiliser const pour les valeurs qui ne doivent pas changer.
+// Utiliser let si la valeur doit être modifiée.
+// Éviter var, car son comportement est imprévisible
+
+// Redeclaration dans le même bloc
+// 🔹 var peut être redéclaré
+// 🔹 let et const non
+
+// var a = 10;
+// var a = 20; // ✅ OK
+
+// let b = 10; 
+// let b = 20; // ❌ Erreur ! (b est déjà déclaré)
+
+// const c = 30;
+// const c = 40; // ❌ Erreur ! (c est déjà déclaré)
+
+// var peut être redéclaré (dangereux en grand projet).
+// let et const empêchent les erreurs en bloquant la redéclaration.
+
 
 // Le mot-clé let en JavaScript est simplement un mot réservé utilisé pour déclarer des variables. 
 // Son nom, "let," peut être interprété comme "laisser" en anglais, 
@@ -46,7 +78,8 @@ console.log(age1 <= age2);  // true (25 est inférieur ou égal à 30)
 // •	Moins de (<) : Vérifie si la valeur à gauche est inférieure à celle de droite.
 // •	Inférieur ou égal (<=) : Vérifie si la valeur à gauche est inférieure ou égale à celle de droite.
 
-
+// la console est un espace de test où les développeurs vérifient le fonctionnement de leur code avant de l'appliquer à une page. 
+//en d'autre terme la console est comme un bloc-notes pour tester des idées avant de les appliquer sur un site.
 
 
 // Message d'alerte
@@ -192,6 +225,32 @@ function addition(a, b) {
     return a + b; // Retourne la somme de a et b
 }
 console.log(addition(5, 3)); // 8
+
+function saluer(nom) {
+    console.log("Bonjour " + nom + " !");
+}
+
+
+
+// une fonction peut etre stocker dans une variable
+const direBonjour = function() {
+    console.log("Bonjour !");
+};
+
+direBonjour(); // Affiche "Bonjour !"
+
+
+// Fonction flecher elle est plus concise.
+const direBonsoir = () => {
+    console.log("Bonjour !");
+};
+
+direBonsoir(); // Affiche "Bonjour !"
+
+// Cas simplifié : Une seule ligne sans {} et return
+const addition = (a, b) => a + b;
+
+console.log(addition(3, 5)); // Affiche 8
 
 
 // boucle while (tant que )
